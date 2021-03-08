@@ -8,35 +8,19 @@ namespace Torres_de_Hanoi
 {
     class Pila
     {
-        public int Size { get; set; }
-        /* TODO: Elegir tipo de Top
-        public int Top { get; set; }
-        public String Top { get; set; }        
-        */
-        /* TODO: Elegir tipo de Elementos
-        public Disco[] Elementos { get; set; }
-        public List<Disco> Elementos { get; set; }
-        */
+        public int Size { get; set; } // Representa la cantidad de discos que hay en la pila
 
-        /* TODO: Implementar métodos */
-        public Pila()
-        {
+        public int Top { get; set; } // Representa el disco que está en la parte superior de una pila
 
-        }
+        public Disco[] Elementos { get; set; } // Representa el conjunto de discos que hay en esa pila.
 
-        public void push(Disco d)
-        {
+        public string nombre { get; set; } // Asigna un nombre a las pilas
 
-        }
-
-        public Disco pop()
-        {
-            return null;
-        }                
-
-        public bool isEmpty()
-        {
-            return true;
+        public Pila() // Constructor
+        { 
+            Elementos = new Disco[100]; // Crea un nuevo disco 
+            Size = 0; // Asignamos los valores pasados al constructor a los parámetros de la clase
+            Top = 100; // Asignamos 100 al valor del disco superior para pilas vacías
         }
 
     }
