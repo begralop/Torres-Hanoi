@@ -32,7 +32,7 @@ namespace Torres_de_Hanoi
 
         public Disco pop() // Permite extraer el disco de la parte superior de la pila.
         {
-            if (isEmpty() == true) // Si el metod está vació vale true
+            if (isEmpty() == true) // Si el metodo isEmpty vale true
             {
                 return null; // Devuelve null
             }
@@ -52,7 +52,7 @@ namespace Torres_de_Hanoi
             }
         }
 
-        public bool isEmpty() // Informa si la pila está vacía o no
+        public bool isEmpty() // metodo para comprobar si la pila está vacía o no
         {
             if (Size == 0) // Si el tamaño es 0
             {
