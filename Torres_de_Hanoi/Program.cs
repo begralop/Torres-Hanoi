@@ -15,6 +15,14 @@ namespace Torres_de_Hanoi
             int tipoAlgtm = Convert.ToInt32(Console.ReadLine()); // Almacenamos en una variable tipo int la respuesta del usuario
             Console.WriteLine(" "); // Espacio vacío para que el código se vea más claro y no todo junto
 
+            if(tipoAlgtm <= 0 || tipoAlgtm >= 3) {
+                Console.WriteLine("No has introducido ni 1 ni 2, lo siento, adiós."); // Preguntamos al usuario
+                Console.WriteLine("Press enter to close"); // Preguntamos al usuario
+                Console.ReadLine();
+            }
+
+            else
+            {
             int numDiscos; // Variable tipo int para almacenar el numero de discos
 
             do // Bucle hasta que sea mayor que 0
@@ -65,6 +73,7 @@ namespace Torres_de_Hanoi
 
                 if (tipoAlgtm == 1) // Si la respuesta del usuario al principio es uno
                 {
+
                     int sol_it = torres_hanoi.iterativo(numDiscos, pila1, pila3, pila2); // Llamamos al metodo iterativo y le pasamos los parámetros
                     Console.WriteLine(" "); // Espacio vacío para que el código se vea más claro y no todo junto
                     Console.WriteLine("Se hizo en: " + sol_it + " movimientos"); // Muestra por pantalla 
@@ -79,7 +88,7 @@ namespace Torres_de_Hanoi
 
 
             }
-          
+            }
         }
     }
 }
