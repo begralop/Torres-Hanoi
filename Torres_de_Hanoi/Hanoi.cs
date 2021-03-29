@@ -52,8 +52,9 @@ namespace Torres_de_Hanoi
                         break; // Hacemos que el método pare
                     }
                 }
-                Console.WriteLine("Se hizo en: " + movimientos + " movimientos"); // Muestra por pantalla en cuantos movimientos se hizo
+               
             }
+
             else // Si no es par
             {
                 while (fin.Size != n) // Hacemos los siguientes movimientos hasta que la pila fin tenga el nº de discos iniciales
@@ -77,11 +78,32 @@ namespace Torres_de_Hanoi
                         break; // Hacemos que el método pare
                     }
                 }
-                Console.WriteLine("Se hizo en: " + movimientos + " movimientos"); // Muestra por pantalla en cuantos movimientos se hizo
+             
             }
             return movimientos; // Devuelve el número de movimientos utilizados
            
         }
+
+
+        public int recursivo(int n, Pila ini, Pila fin, Pila aux) // Método recursivo, recibe un nº de discos y las 3 pilas
+        {
+            if (n == 1) // Si el número de discos vale 1
+            {
+                mover_disco(ini, fin); // El único movimiento es de la pila ini a la fin
+                movimientos = movimientos + 1; // Movimientos valdrá este + 1 (0 + 1 = 1)
+            }
+            else // Si no
+            {
+                recursivo(n - 1, ini, aux, fin); // Llama a recursivo pasándole el num de discos menos 1, y las 3 pilas
+                mover_disco(ini, fin); // Mover disco de la pila ini a la fin
+                movimientos = movimientos + 1; // Los movimientos valdrán este más uno
+                recursivo(n - 1, aux, fin, ini); // Llama a recursivo pasándole el num de discos menos 1, y las 3 pilas
+
+            }
+
+            return movimientos; // Devuelve el número de movimientos utilizados
+        }
+
 
     }
 }
