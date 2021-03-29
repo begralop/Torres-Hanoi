@@ -15,13 +15,13 @@ namespace Torres_de_Hanoi
             int tipoAlgtm = Convert.ToInt32(Console.ReadLine()); // Almacenamos en una variable tipo int la respuesta del usuario
             Console.WriteLine(" "); // Espacio vacío para que el código se vea más claro y no todo junto
 
-            if(tipoAlgtm <= 0 || tipoAlgtm >= 3) {
-                Console.WriteLine("No has introducido ni 1 ni 2, lo siento, adiós."); // Preguntamos al usuario
-                Console.WriteLine("Press enter to close"); // Preguntamos al usuario
-                Console.ReadLine();
+            if(tipoAlgtm <= 0 || tipoAlgtm >= 3) { // Si el valor de tipoalg es menor o igual a cero o mayor o igual a 0
+                Console.WriteLine("No has introducido ni 1 ni 2, lo siento, adiós."); // Mandamos mensaje
+                Console.WriteLine("Press enter to close"); 
+                Console.ReadLine(); // Cerramos el programa
             }
 
-            else
+            else // si es 1 o 2 entonces
             {
             int numDiscos; // Variable tipo int para almacenar el numero de discos
 
